@@ -16,7 +16,7 @@ export default function Modal({ drinkModal, closeModal }) {
   };
   return (
     <div id="myModal" className={styles.modal} onClick={(e) => {
-      if(e.target.className==styles.modal)closeModal()}}>
+      if(e.target.className===styles.modal)closeModal()}}>
       <div className={styles.modal_content}>
         <div className={styles.modal_header}>
           <p class="drinkNome">{drinkModal.strDrink}</p>
@@ -26,7 +26,7 @@ export default function Modal({ drinkModal, closeModal }) {
             }}>&times;</button>
         </div>
         <div className={styles.modal_body}>
-          <img src={drinkModal.strDrinkThumb} className={styles.modalImg} />
+          <img alt="Foto Drink" src={drinkModal.strDrinkThumb} className={styles.modalImg} />
           <p>Categoria: {drinkModal.strCategory}</p>
           <p>Copo: {drinkModal.strGlass}</p>
           <p>Ingredientes: {`${pegaIng(drinkModal)}`}</p>

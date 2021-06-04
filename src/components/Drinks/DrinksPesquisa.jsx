@@ -86,7 +86,7 @@ export default function DrinksPesquisa() {
       <div className={styles.divPesquisaNav}>
         <form onSubmit={pesquisaDrink}>
           <input name="campoNome" placeholder="Digite o nome" />
-          <button className={styles.pesquisaBtn}><img src="/pesquisa-de-lupa.png" /></button>
+          <button className={styles.pesquisaBtn}><img alt="Foto Lupa" src="/pesquisa-de-lupa.png" /></button>
         </form>
         <select onChange={pegaCategoria}>
           <option selected disabled>Selecione</option>
@@ -112,6 +112,7 @@ export default function DrinksPesquisa() {
               <div key={drink.idDrink} className={styles.drinkDiv}>
                 <p class="drinkNome">{drink.strDrink}</p>
                 <img
+                  alt="Foto Drink"
                   className={styles.drinkImg}
                   src={drink.strDrinkThumb}
                   onClick={() => {
@@ -124,7 +125,7 @@ export default function DrinksPesquisa() {
             )
           })
         ) :
-          <img src="https://st3.depositphotos.com/1006899/14648/i/600/depositphotos_146482703-stock-photo-robot-holding-the-numbers-404.jpg" />}
+          <img alt="Foto erro 404" src="https://st3.depositphotos.com/1006899/14648/i/600/depositphotos_146482703-stock-photo-robot-holding-the-numbers-404.jpg" />}
       </div>
     </div>
   )

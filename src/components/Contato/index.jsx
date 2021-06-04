@@ -6,7 +6,7 @@ export default function Contato() {
 		<section className={styles.contatoSection}>
 			<h2>Contato</h2>
 			<div className={styles.contatoDiv}>
-				<img src="./contato.jpg" />
+				<img alt="Foto contato" src="./contato.jpg" />
 				<form>
 					<label>Nome:</label>
 					<input placeholder="Digite seu nome" required />

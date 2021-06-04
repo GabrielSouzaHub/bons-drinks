@@ -8,7 +8,7 @@ const imgUrls = [
   "https://s1.1zoom.me/b5050/401/Drinks_Bar_Bottle_468131_1920x1080.jpg"
 ];
 
-export default function Carrossel({ }) {
+export default function Carrossel() {
   const qtdImg = (imgUrls.length - 1);
   const [indImg, setindImg] = React.useState(0);
   function proxImg() {

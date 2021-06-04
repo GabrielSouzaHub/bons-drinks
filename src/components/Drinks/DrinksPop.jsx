@@ -34,6 +34,7 @@ export default function DrinksPop() {
           <div key={drink.idDrink} className={styles.drinkDiv}>
             <p class="drinkNome">{drink.strDrink}</p>
             <img
+              alt="Foto Drink"
               className={styles.drinkImg}
               src={drink.strDrinkThumb}
               onClick={() => {
