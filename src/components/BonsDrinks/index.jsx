@@ -6,7 +6,6 @@ export default function BonsDrinks() {
 	return (
 		<div className={styles.divBonsDrinks}>
 		<Carrossel />
-		abaixo do carrossel
 		</div>
 	);
 }

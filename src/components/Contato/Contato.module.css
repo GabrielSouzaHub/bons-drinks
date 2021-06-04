@@ -1,0 +1,37 @@
+.contatoSection h2 {
+  font-size: 70px;
+  text-align: center;
+  padding: 2rem 0;
+}
+.contatoDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.contatoDiv img {
+  place-self: center;
+}
+.contatoDiv form {
+  display: flex;
+  place-self: center;
+  flex-direction: column;
+}
+.contatoDiv label {
+  font-size: 30px;
+}
+.contatoDiv input {
+  width: 50rem;
+  font-size: 20px;
+}
+.contatoDiv textarea {
+  resize: none;
+  height: 10rem;
+  font-size: 20px;
+}
+.contatoDiv button {
+  align-self: center;
+  min-width: 15rem;
+  min-height: 3rem;
+  margin-top: 1rem;
+}

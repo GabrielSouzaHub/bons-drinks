@@ -17,11 +17,11 @@ function App() {
   useEffect(() => {
     setTimeout(()=>{
       setLoading(false);
-    },500)
+    },2500)
   }, [])
   return (
     loading ? <Loading/> :
-    <div>
+    <div className="appContainer">
       <Router>
         <Header />
         <Switch>

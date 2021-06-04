@@ -3,24 +3,20 @@ import styles from './Contato.module.css';
 
 export default function Contato() {
 	return (
-		<div className="appDiv">
-			<h1>Contato</h1>
-			<img src="./contato.jpg"/>
-			<form>
-				<div>
+		<section className={styles.contatoSection}>
+			<h2>Contato</h2>
+			<div className={styles.contatoDiv}>
+				<img src="./contato.jpg" />
+				<form>
 					<label>Nome:</label>
-					<input />
-				</div>
-				<div>
+					<input placeholder="Digite seu nome" required />
 					<label>E-mail:</label>
-					<input />
-				</div>
-				<div>
+					<input placeholder="Digite seu email" required />
 					<label>Mensagem:</label>
-					<input />
-				</div>
-				<button>Enviar</button>
-			</form>
-		</div>
+					<textarea placeholder="Digite seu feedback" className={styles.inputMensagem} required />
+					<button>Enviar</button>
+				</form>
+			</div>
+		</section>
 	);
 }

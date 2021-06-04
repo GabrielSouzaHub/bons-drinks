@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
 .headerDiv {
   display: flex;
+  grid-area: header;
   width: 100%;
   height: 100px;
   justify-content: center;
 
-  background-color: #ef9a9a;
-  border-bottom: 10px solid #ba6b6c;
+  background-color: #8C2703;
+  border-bottom: 10px solid #733729;
 }
 .headerNav {
   display: flex;
@@ -21,10 +22,10 @@ a {
 a h1 {
   font-size: 40px;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: rgb(127, 31, 206);
+  color: whitesmoke;
 }
 a :hover {
-  font-size: 50px;
+  transform: scale(1.1);
 }
 .bonsDrinks {
   font-family: 'Bilbo Swash Caps', cursive;

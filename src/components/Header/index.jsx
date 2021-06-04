@@ -14,10 +14,10 @@ export default function Header() {
 					</Link>
 					<Link to="/">
 						<div>
-						<h1 className={styles.bonsDrinks}><img src="logo.png" alt="logo" className={styles.logo}/>Bons Drinks</h1>
+						<h1 className={styles.bonsDrinks}>Bons Drinks</h1>
 						</div>
 					</Link>
-					<Link to="/nossoTime">
+					<Link to="/nossotime">
 						<h1>Nosso time</h1>
 					</Link>
 					<Link to="/contato">

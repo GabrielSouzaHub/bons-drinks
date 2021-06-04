@@ -1,5 +1,16 @@
-.appDiv {
-  background-color: #ffcccb
+.appContainer {
+  min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+      "header"
+      "content"
+      "footer";
+  background-color: #592C22;
+  color: whitesmoke;
+}
+h2 {
+  font-size: 45px;
 }
 .carrossel {
   height:100%;
@@ -15,6 +26,7 @@ text-align: center;
 }
 .imgSlide {
   width: 100%;
+  height: 100%;
 object-fit: cover;
   transition: background-image .3s ease-in-out;
 }

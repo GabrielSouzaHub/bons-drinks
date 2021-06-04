@@ -1,19 +1,31 @@
 import React, { useState } from 'react'
 import { PesquisaCategoriaAlc, PesquisaCategoria, PesquisaCategoriaCopo } from '../Services/fetchCategoria';
+import Modal from '../Modal';
 
-
-import styles from './Drinks.module.css';
+import styles from './DrinksPesquisa.module.css';
 
 export default function DrinksPesquisa() {
   let drinkNome = '';
   const [data, setData] = useState([]);
   const [categoria, setCategoria] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [dadosModal, setDadosModal] = useState({});
+  /**********************************************
+   * PESQUISA DADOS PARA MODAL
+   **********************************************/
+  function retornaModal() {
+    if (modal) return <Modal drinkModal={dadosModal} closeModal={abreModal} />;
+  }
+  function abreModal() {
+    setModal(!modal);
+  }
+
   /**********************************************
    * PESQUISA DRINQUE POR CATEGORIA
    **********************************************/
   function pegaCategoria(e) {
     if (e.target.value === 'Alcóolico') {
-      setCategoria(['Alcoholic', 'Non_Alcoholic']);
+      setCategoria(['Alcoholic', 'Non Alcoholic']);
     } else if (e.target.value === 'Categoria') {
       setCategoria([
         'Ordinary Drink',
@@ -39,9 +51,7 @@ export default function DrinksPesquisa() {
   }
   async function drinkCategoria(e) {
     let nomeCategoria = e.target.value;
-
-    //nomeCategoria = nomeCategoria.replaceAll(" ","_");
-    if (nomeCategoria === 'Alcoholic' || nomeCategoria === 'Non_Alcoholic') {
+    if (nomeCategoria === 'Alcoholic' || nomeCategoria === 'Non Alcoholic') {
       console.log('entrou aqui no alcoolico');
       const dados = await PesquisaCategoriaAlc(nomeCategoria);
       setData(dados);
@@ -72,11 +82,11 @@ export default function DrinksPesquisa() {
   }
   return (
     <div>
+      <div className={styles.divPesquisaNav}>
       <form onSubmit={pesquisaDrink}>
         <input name="campoNome" placeholder="Digite o nome" />
         <button><img src="pesquisa-de-lupa.png" /></button>
       </form>
-      <div>
         <select onChange={pegaCategoria}>
           <option selected disabled>Selecione</option>
           <option value="Alcóolico">Alcóolico</option>
@@ -93,18 +103,28 @@ export default function DrinksPesquisa() {
             })
           }
         </select>
+        {retornaModal()}
       </div>
+      <div className={styles.divDrinksPesquisa}>
       {data ? (
         data.map((drink) => {
           return (
             <div key={drink.idDrink} className={styles.drinkDiv}>
-              <h2 className={styles.drinkNome}>{drink.strDrink}</h2>
-              <img className={styles.drinkImg} src={drink.strDrinkThumb} />
+              <p className={styles.drinkNome}>{drink.strDrink}</p>
+              <img
+                className={styles.drinkImg}
+                src={drink.strDrinkThumb}
+                onClick={() => {
+                  abreModal()
+                  setDadosModal(drink)
+                }}
+              />
             </div>
           )
         })
       ) :
-        <img src="https://st3.depositphotos.com/1006899/14648/i/600/depositphotos_146482703-stock-photo-robot-holding-the-numbers-404.jpg"/>}
+        <img src="https://st3.depositphotos.com/1006899/14648/i/600/depositphotos_146482703-stock-photo-robot-holding-the-numbers-404.jpg" />}
+        </div>
     </div>
   )
 }

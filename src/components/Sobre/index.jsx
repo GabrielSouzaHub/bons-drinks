@@ -1,8 +1,10 @@
 import React from 'react';
+import styles from './Sobre.module.css'
 
 export default function Sobre() {
 	return (
-		<div>
+		<div className={styles.sobreDiv}>
+			<h2>Sobre nós</h2>
 			<p>Lorem ipsum sodales suspendisse scelerisque nisi himenaeos odio, ornare massa ut vehicula integer phasellus ligula rhoncus, integer interdum porttitor non viverra quisque nisi, nulla leo aenean nullam nunc iaculis. sociosqu suspendisse quis aptent vitae duis laoreet vel justo et turpis, viverra eros diam fusce orci aenean class ipsum curabitur, pulvinar commodo mattis auctor condimentum per hendrerit per lorem. risus pellentesque nibh commodo massa sapien malesuada nulla, fermentum est pellentesque curabitur ultricies adipiscing quisque, nullam ornare felis curabitur ornare rhoncus. eu donec porttitor pellentesque ultrices ut gravida quisque cubilia iaculis donec, blandit elit blandit magna habitant quis eros curabitur turpis, integer consequat luctus aliquam sagittis nam ac porttitor nibh. 
 
 Ultricies nulla fames pharetra id lectus ipsum amet elementum dictumst mattis porta, id condimentum cursus habitant rhoncus sodales quam posuere justo gravida, vivamus ante sapien taciti ut sodales primis adipiscing dolor mi. ad et vestibulum nisi auctor aliquam scelerisque dictum, porttitor lacus in habitasse netus condimentum leo, placerat dictumst orci dui fames aenean. pharetra aliquam erat nullam et egestas eleifend, elementum lacinia habitant dictumst diam class quisque, aliquam accumsan platea habitant ligula. tristique mollis facilisis blandit aptent sagittis sem iaculis pulvinar morbi ut blandit mattis, morbi euismod tortor interdum nec feugiat morbi pulvinar lectus sapien urna consectetur, et torquent lacus libero vestibulum class orci at quisque dictum luctus. 

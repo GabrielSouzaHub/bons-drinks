@@ -1,0 +1,27 @@
+.drinksDiv {
+  display: grid;
+    grid-template-areas:
+    "title title title title"
+    "nav nav nav nav"
+    "content content content content";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px auto;
+    width: 80%;
+    justify-self: center;
+}
+.drinksDiv h2 {
+  grid-area: title;
+}
+.drinksDiv h2 a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.drinksDivNav {
+  display: flex;
+    align-self: center;
+    justify-content: space-around;
+    grid-area: nav;
+}
+.drinksDivContent {
+  grid-area: content;
+}

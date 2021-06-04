@@ -1,6 +1,8 @@
 .footerDiv {
-  margin: 0 auto;
-
-  background-color: #ef9a9a;
-  border-top: 10px solid #ba6b6c;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  background-color: #8C2703;
+  border-top: 10px solid #592C22;
 }

@@ -1,0 +1,11 @@
+.sobreDiv{
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+.sobreDiv p {
+  font-size: 20px;
+}
