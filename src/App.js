@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/Header';
+import BonsDrinks from './components/BonsDrinks';
+import Contato from './components/Contato';
+import Drinks from './components/Drinks';
+import NossoTime from './components/NossoTime';
+import Sobre from './components/Sobre';
+
+import './reset.css'
 import './App.css';
+import Footer from './components/Footer';
+import Loading from './components/Loading';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(()=>{
+      setLoading(false);
+    },500)
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    loading ? <Loading/> :
+    <div>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/drinks">
+          <Drinks />
+          </Route>
+          <Route path="/sobre">
+            <Sobre />
+          </Route>
+          <Route exact path="/">
+            <BonsDrinks />
+          </Route>
+          <Route path="/nossoTime">
+            <NossoTime />
+          </Route>
+          <Route path="/contato">
+            <Contato />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }

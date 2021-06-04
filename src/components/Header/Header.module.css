@@ -1,0 +1,35 @@
+@import url('https://fonts.googleh1pis.com/css2?family=Bilbo+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+.headerDiv {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+
+  background-color: #ef9a9a;
+  border-bottom: 10px solid #ba6b6c;
+}
+.headerNav {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+}
+a h1 {
+  font-size: 40px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: rgb(127, 31, 206);
+}
+a :hover {
+  font-size: 50px;
+}
+.bonsDrinks {
+  font-family: 'Bilbo Swash Caps', cursive;
+}
+.logo {
+  height: 30px;
+  width: 30px;
+}
