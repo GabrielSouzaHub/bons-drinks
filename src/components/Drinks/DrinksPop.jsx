@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PesquisaCategoriaAlc } from '../Services/fetchCategoria';
+import { PesquisaCategoriaAlc, PesquisaDrinkId } from '../Services/fetchCategoria';
 import Modal from '../Modal';
 
 import styles from './DrinksPop.module.css';
@@ -9,6 +9,9 @@ export default function DrinksPop() {
   const [modal, setModal] = useState(false);
   const [data, setData] = useState([]);
   const [dadosModal, setDadosModal] = useState({});
+  async function drinkId(id) {
+    setDadosModal(await PesquisaDrinkId(id));
+  }
   function retornaModal() {
     if (modal) return <Modal drinkModal={dadosModal} closeModal={abreModal} />;
   }
@@ -29,13 +32,14 @@ export default function DrinksPop() {
       {data.slice(12, 22).map((drink) => {
         return (
           <div key={drink.idDrink} className={styles.drinkDiv}>
-            <p className={styles.drinkNome}>{drink.strDrink}</p>
+            <p class="drinkNome">{drink.strDrink}</p>
             <img
               className={styles.drinkImg}
               src={drink.strDrinkThumb}
               onClick={() => {
                 abreModal()
                 setDadosModal(drink)
+                drinkId(drink.idDrink)
               }}
             />
           </div>

@@ -1,3 +1,6 @@
+.drinksSection {
+  display: grid;
+}
 .drinksDiv {
   display: grid;
     grid-template-areas:
@@ -9,12 +12,17 @@
     width: 80%;
     justify-self: center;
 }
-.drinksDiv h2 {
-  grid-area: title;
+.drinksTitle {
+  align-self: center;
+  justify-self: center;
 }
-.drinksDiv h2 a {
+.drinksTitleA {
   text-decoration: none;
   color: whitesmoke;
+}
+a button {
+  min-width: 15rem;
+  min-height: 3rem;
 }
 .drinksDivNav {
   display: flex;

@@ -12,6 +12,27 @@
 h2 {
   font-size: 45px;
 }
+button {
+  transition-duration: 0.4s;
+  border-radius: 12px;
+}
+
+button:hover {
+  text-decoration: none;
+  background-color: #3f260f;
+  color: white;
+  cursor: pointer;
+}
+/*********************************
+            Drink nome
+**********************************/
+.drinkNome {
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+/*********************************
+            CSS CARROSSEL
+**********************************/
 .carrossel {
   height:100%;
   margin: 0;
@@ -34,10 +55,10 @@ object-fit: cover;
 .setaSlide {
 color: var(--corTema);
 cursor: pointer;
-font-size: 30px;
-position: fixed;
+font-size: 50px;
+position: absolute;
 border: none;
-background-color: var(--corFundo);
+background-color: whitesmoke;
 top: 70%;
 }
 

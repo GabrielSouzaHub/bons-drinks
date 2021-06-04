@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Modal.module.css';
 
 export default function Modal({ drinkModal, closeModal }) {
-  console.log(closeModal);
+  console.log(drinkModal);
   function pegaIng(drink) {
     const drinkIngredientes = Object.entries(drink);
     return drinkIngredientes
@@ -15,16 +15,26 @@ export default function Modal({ drinkModal, closeModal }) {
       .join(", ");
   };
   return (
-    <div id="myModal" className={styles.modal}>
-      <button onClick={() =>{
-        closeModal()
-      }}>X</button>
-      <img src={drinkModal.strDrinkThumb} />
-      <h3>{drinkModal.strDrink}</h3>
-      <p>Categoria: {drinkModal.strCategory}</p>
-      <p>Copo: {drinkModal.strGlass}</p>
-      <p>Ingredientes: {`${pegaIng(drinkModal)}`}</p>
-      <p>Instruções: {drinkModal.strInstructions}</p>
+    <div id="myModal" className={styles.modal} onClick={(e) => {
+      if(e.target.className==styles.modal)closeModal()}}>
+      <div className={styles.modal_content}>
+        <div className={styles.modal_header}>
+          <p class="drinkNome">{drinkModal.strDrink}</p>
+          <button className={styles.close}
+            onClick={() => {
+              closeModal()
+            }}>&times;</button>
+        </div>
+        <div className={styles.modal_body}>
+          <img src={drinkModal.strDrinkThumb} className={styles.modalImg} />
+          <p>Categoria: {drinkModal.strCategory}</p>
+          <p>Copo: {drinkModal.strGlass}</p>
+          <p>Ingredientes: {`${pegaIng(drinkModal)}`}</p>
+        </div>
+        <div className={styles.modal_footer}>
+          <p>Instruções: {drinkModal.strInstructions}</p>
+        </div>
+      </div>
     </div>
   )
 }

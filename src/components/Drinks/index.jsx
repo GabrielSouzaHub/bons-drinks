@@ -7,25 +7,26 @@ import DrinksPesquisa from './DrinksPesquisa';
 
 export default function Drinks() {
 	return (
-		<div className={styles.drinksDiv}>
+		<section className={styles.drinksSection}>
 			<Router>
-				<h2><NavLink to="/drinks">Drinks</NavLink></h2>
-				<div className={styles.drinksDivNav}>
-					<button><NavLink to="/drinkspop">Drinks Populares</NavLink></button>
-					<button><NavLink to="/drinkspesquisa">Buscar Drinks</NavLink></button>
-				</div>
-				<div className={styles.drinksDivContent}>
-					<Switch>
-						<Route path="/DrinksPop">
-							<DrinksPop />
-						</Route>
-						<Route path="/DrinksPesquisa">
-							<DrinksPesquisa />
-						</Route>
-					</Switch>
+				<h2 className={styles.drinksTitle}><NavLink to="/drinks/drinksPop" className={styles.drinksTitleA}>Drinks</NavLink></h2>
+				<div className={styles.drinksDiv}>
+					<div className={styles.drinksDivNav}>
+						<NavLink to="/drinks/drinkspop"><button>Drinks Populares</button></NavLink>
+						<NavLink to="/drinks/drinkspesquisa"><button>Buscar Drinks</button></NavLink>
+					</div>
+					<div className={styles.drinksDivContent}>
+						<Switch>
+							<Route path="/drinks/drinksPop">
+								<DrinksPop />
+							</Route>
+							<Route path="/drinks/drinksPesquisa">
+								<DrinksPesquisa />
+							</Route>
+						</Switch>
+					</div>
 				</div>
 			</Router>
-
-		</div>
+		</section>
 	);
 }
