@@ -1,12 +1,12 @@
-#  <img align="center" src = "./images/logo_OX.png" alt="Rosto touro Ox Fundraising" width="50px" heigth="50px">  Projeto Stone Ox Fundraising 
+# Projeto Bons Drinks 
 
 <p align="center">
-    <img src ="./images/logo_ox.trans.png" alt="Touro Ox fundraising">
+    <img src ="https://images5.alphacoders.com/462/thumb-1920-462280.jpg" alt="Bons Drinks estabelecimento">
 </p>
    
 ## 📖 Sumário
 
-
+<details>
 <summary>Veja mais</summary>
 
 1.  [O que é o projeto](https://github.com/GabrielSouzaHub/projetoStone#O-que-%c3%a9-o-projeto)
