@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+#  <img align="center" src = "./images/logo_OX.png" alt="Rosto touro Ox Fundraising" width="50px" heigth="50px">  Projeto Stone Ox Fundraising 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <img src ="./images/logo_ox.trans.png" alt="Touro Ox fundraising">
+</p>
+   
+## 📖 Sumário
 
-## Available Scripts
 
-In the project directory, you can run:
+<summary>Veja mais</summary>
 
-### `npm start`
+1.  [O que é o projeto](https://github.com/GabrielSouzaHub/projetoStone#O-que-%c3%a9-o-projeto)
+2.  [O que faz](https://github.com/GabrielSouzaHub/projetoStone#O-que-faz)
+3.  [O que é uma api](https://github.com/GabrielSouzaHub/projetoStone#O-que-%c3%a9-uma-api)
+4.  [Netfly](https://github.com/GabrielSouzaHub/projetoStone#Heroku)
+5.  [Como baixar e rodar o projeto](https://github.com/GabrielSouzaHub/projetoStone#Como-baixar-e-rodar-o-projeto)
+6.  [Rotas disponíveis](https://github.com/GabrielSouzaHub/projetoStone#Rotas-dispon%c3%adveis)
+7.  [Tecnologias utilizadas](https://github.com/GabrielSouzaHub/projetoStone#Tecnologias-utilizadas)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</details>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# O que é o projeto
 
-### `npm test`
+Este projeto é o front-end de uma aplicação web chamada [Bons Drinks](https://bons-drinks-gabriel.netlify.app), cujo objetivo é a pesquisa de drinks e suas informações.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# O que faz
 
-### `npm run build`
+Esta aplicação utiliza requisições a API [The Cocktail DB](https://www.thecocktaildb.com/api.php) para a busca de drinks, modo de preparo e ingredientes. Com esta aplicação podemos pesquisar por drinks populares, pelo nome e tipos de drinks, como, alcóolico, não alcóolico, tipo de copo que levam, entre outros.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# O que é uma api
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+API é um conjunto de padrões ou rotinas que são disponibilizadas por uma aplicação, possibilitando que outra aplicação possa consumir a API de forma que tire proveito de suas funcionalidades.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Netfly
 
-### `npm run eject`
+Netfly é uma plataforma que disponibiliza em nuvem a hospedagem de uma aplicação front-end.<br>
+[Acesse seu deploy](https://bons-drinks-gabriel.netlify.app) para ver seu funcionamento.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Como Baixar e rodar o Projeto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. 📌 Clone o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```Shell
+git clone https://github.com/GabrielSouzaHub/projetoStone.git
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. 📌 Em seu terminal. Instale as dependências
 
-## Learn More
+```Shell
+yarn
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. 📌 Para rodar o projeto utilize
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```Shell
+yarn start
+```
 
-### Code Splitting
+4. 📌 Acesse
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```Shell
+http://localhost:3000
+```
 
-### Analyzing the Bundle Size
+# Rotas disponíveis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📌 "/"
 
-### Making a Progressive Web App
+> Página principal 
+> <br> Possui carrossel de imagens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📌 "/drinks"
 
-### Advanced Configuration
+> Página de drinks 
+> <br> Possui navegação para drinks populares e pesquisa de drinks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 📍 "/drinks/drinkspop"
 
-### Deployment
+> Página de drinks populares
+> <br> Possui título, imagem e acesso a modal de drinks ao clicar na foto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 📍 "/drinks/drinkspesquisa"
 
-### `npm run build` fails to minify
+> Página de pesquisar drinks
+> <br> Possui barra de pesquisa para pôr nome do drink e opções para categoria de drinks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📌 "/sobre"
+
+> Página de pesquisar drinks
+> <br> Possui barra de pesquisa para pôr nome do drink e opções para categoria de drinks
+
+## 📌 "/nossotime"
+
+> Página do nosso time
+> <br> Possui fotos de todos integrantes que desenvolveram esta aplicação web
+
+## 📌 "/contato"
+
+> Página de contato
+> <br> Possui 3 campos para preenchimento de dados e botão para enviar uma mensagem
+
+# Tecnologias utilizadas
+1. [React](https://pt-br.reactjs.org)
+2. [API](https://www.thecocktaildb.com/api.php)
+3. [Netfly](https://www.netlify.com)
