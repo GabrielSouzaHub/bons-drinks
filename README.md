@@ -12,7 +12,7 @@
 1.  [O que é o projeto](https://github.com/GabrielSouzaHub/bons-drinks#O-que-%c3%a9-o-projeto)
 2.  [O que faz](https://github.com/GabrielSouzaHub/bons-drinks#O-que-faz)
 3.  [O que é uma api](https://github.com/GabrielSouzaHub/bons-drinks#O-que-%c3%a9-uma-api)
-4.  [Netfly](https://github.com/GabrielSouzaHub/bons-drinks#Heroku)
+4.  [Netfly](https://github.com/GabrielSouzaHub/bons-drinks#Netfly)
 5.  [Como baixar e rodar o projeto](https://github.com/GabrielSouzaHub/bons-drinks#Como-baixar-e-rodar-o-projeto)
 6.  [Rotas disponíveis](https://github.com/GabrielSouzaHub/bons-drinks#Rotas-dispon%c3%adveis)
 7.  [Tecnologias utilizadas](https://github.com/GabrielSouzaHub/bons-drinks#Tecnologias-utilizadas)
