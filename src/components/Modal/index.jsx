@@ -16,7 +16,8 @@ export default function Modal({ drinkModal, closeModal }) {
   };
   return (
     <div id="myModal" className={styles.modal} onClick={(e) => {
-      if(e.target.className===styles.modal)closeModal()}}>
+      if (e.target.className === styles.modal) closeModal()
+    }}>
       <div className={styles.modal_content}>
         <div className={styles.modal_header}>
           <p class="drinkNome">{drinkModal.strDrink}</p>

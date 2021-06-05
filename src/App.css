@@ -15,6 +15,9 @@ h2 {
 button {
   transition-duration: 0.4s;
   border-radius: 12px;
+  background-color: #8C2703;
+  color: whitesmoke;
+  font-size: 1.5rem;
 }
 
 button:hover {
